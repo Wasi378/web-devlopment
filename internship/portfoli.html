@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Stock Market Portfolio</title>
+    <style>
+        body, h1, h2, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 36px;
+}
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+.stock-name {
+    font-weight: bold;
+}
+
+.stock-price {
+    color: #009900;
+}
+
+.stock-change {
+    color: #009900;
+}
+
+.search form {
+    display: flex;
+}
+
+#stock-symbol {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+} 
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Stock Portfolio</h1>
+    </header>
+    <main>
+        <section class="portfolio">
+            <h2>My Portfolio</h2>
+            <ul>
+                <!-- List of stocks in the portfolio -->
+                <li>
+                    <span class="stock-name">AAPL</span>
+                    <span class="stock-price">$150.00</span>
+                    <span class="stock-change">+2.5%</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="search">
+            <h2>Search Stocks</h2>
+            <form>
+                <input type="text" id="stock-symbol" placeholder="Enter stock symbol">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="stock-details">
+            <!-- Display stock details here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Stock Portfolio</p>
+    </footer>
+</body>
+</html>

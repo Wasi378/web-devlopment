@@ -1,0 +1,137 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wasiur Rahman Food Shop</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        .header h1 {
+            font-size: 36px;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .menu-item {
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            text-align: center;
+        }
+        .menu-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .menu-item h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .menu-item p {
+            font-size: 16px;
+        }
+        
+        .order-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 24px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .order-button:hover {
+            background-color: #0056b3;
+        }
+        
+        .order-summary {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Welcome to Wasiur Rahman Food Shop</h1>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Menu</h2>
+        <div class="menu">
+            <!-- Food items go here -->
+            <div class="menu-item">
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/matar-paneer-1.jpg">
+                <h2>Food Item 1</h2>
+                <p>saahi paneer</p>
+                <p>Price: 99 rupees</p>
+                <button class="order-button" onclick="addToCart('Food Item 1', 10.99)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2016/02/veg-burger-recipe-1.jpg">
+                <h2>Food Item 2</h2>
+                <p>burger</p>
+                <p>Price: 50 rupees</p>
+                <button class="order-button" onclick="addToCart('Food Item 2', 12.99)">Add to Cart</button>
+            </div>
+            <!-- Add more food items here -->
+        </div>
+
+        <h2>Order Summary</h2>
+        <div class="order-summary">
+            <ul id="cart"></ul>
+            <p>Total: $<span id="total">0.00</span></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for managing the shopping cart
+        let cart = [];
+        let total = 0;
+
+        function addToCart(itemName, itemPrice) {
+            cart.push({ name: itemName, price: itemPrice });
+            total += itemPrice;
+
+            updateCartUI();
+        }
+        function updateCartUI() {
+            const cartList = document.getElementById("cart");
+            const totalElement = document.getElementById("total");
+            
+            cartList.innerHTML = "";
+            cart.forEach(item => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartList.appendChild(listItem);
+            });
+
+            totalElement.textContent = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
